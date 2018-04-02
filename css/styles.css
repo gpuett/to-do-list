@@ -16,12 +16,20 @@ body {
   background-color: beige;
 }
 
+#chores {
+  border-style: double;
+  min-height: 150px;
+  max-width: 350px;
+  padding-left: 150px;
+}
+
 #new-chore{
   max-width: 200px;
 }
 
 .btn {
   width: 100px;
+  margin-bottom: 10px;
 }
 
 h2 {
