@@ -10,3 +10,20 @@ ul {
   text-decoration: line-through;
     color: red;
 }
+
+body {
+  margin: 20px;
+  background-color: beige;
+}
+
+#new-chore{
+  max-width: 200px;
+}
+
+.btn {
+  width: 100px;
+}
+
+h2 {
+  font-family: monospace;
+}

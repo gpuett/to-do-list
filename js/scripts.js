@@ -15,7 +15,9 @@ $(function() {
     $("#new-chore").val("");
 
     $(".chore").click(function() {
-      $(this).remove();
+      $(this).fadeOut("fast", function(){
+
+      });
     });
   });
 });
