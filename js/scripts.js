@@ -2,6 +2,16 @@ function ToDo(chore) {
   this.chore = chore;
 }
 
+function scrollDiv(dir, px) {
+  var scroller = document.getElementById('scroller');
+  if (dir == 'l') {
+    scroller.scrollLeft -= px;
+  }
+  else if (dir == 'r') {
+    scroller.scrollLeft += px;
+  }
+}
+
 $(function() {
   $("#to-do").submit(function(event) {
     event.preventDefault();
@@ -15,8 +25,14 @@ $(function() {
     $("#new-chore").val("");
 
     $(".chore").click(function() {
-      $(this).fadeOut("fast", function(){
-
+      var count = [];
+      $(this).remove()
+      $("body").on("DOMNodeRemoved", ".chore", function() {
+        count.push(1);
+        if (count[2] === 1) {
+          $("#game").show();
+          console.log(count);
+        }
       });
     });
   });
